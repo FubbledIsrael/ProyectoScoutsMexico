@@ -40,7 +40,7 @@
                             <i class="fas fa-cog" aria-hidden="true"></i> 
                             Opciones
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu dropdown-menu-primary" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Configuracion</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fas fa-question"></i> Ayuda</a></li>
                             <li><hr class="dropdown-divider"></li>
