@@ -1,0 +1,8 @@
+label.error{
+    color: red;
+    font-style: italic;
+}
+
+input.error, select.error{
+    border: 1px solid red;
+}
