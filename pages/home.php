@@ -16,7 +16,28 @@
                         </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        <div class="accordion-body">
+                        <div class="card">
+                            <div class="card-header">
+                                tarea #1
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Proposito</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id, dolorem deleniti perspiciatis, minus aperiam architecto voluptatem quidem praesentium aut maiores magnam illo dolor consectetur. Quasi adipisci laborum possimus fugiat?</p>
+                                <a href="#" class="btn btn-primary">Realizar</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                tarea #2
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Proposito</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis id, dolorem deleniti perspiciatis, minus aperiam architecto voluptatem quidem praesentium aut maiores magnam illo dolor consectetur. Quasi adipisci laborum possimus fugiat?</p>
+                                <a href="#" class="btn btn-primary">Realizar</a>
+                            </div>
+                        </div>
+                        </div>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -26,7 +47,7 @@
                         </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-body">Sin tareas</div>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -36,7 +57,7 @@
                         </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia ex, adipisci tenetur magnam, minus excepturi similique distinctio autem ea repellat voluptatum vitae ad exercitationem minima, nobis aut. Rerum, aliquid.</div>
                         </div>
                     </div>
                     </div>
@@ -71,14 +92,13 @@
                             </div>
                             <div>
                                 <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".gedf-drop2" aria-controls="gedf-drop2" aria-expanded="false" aria-label="Toggle navigation">
                                         <i class="fa fa-ellipsis-h"></i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
-                                        <a class="dropdown-item" href="#">Hide</a>
-                                        <a class="dropdown-item" href="#">Report</a>
+                                    <div class="dropdown-menu dropdown-menu-left gedf-drop2" aria-labelledby="gedf-drop2">
+                                        <div class="h6 dropdown-header">Configuracion</div>
+                                        <a class="dropdown-item" href="#">Guardar</a>
+                                        <a class="dropdown-item" href="#">Reportar</a>
                                     </div>
                                 </div>
                             </div>
@@ -96,9 +116,9 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Me gusta</a>
+                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comentar</a>
+                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Compartir</a>
                     </div>
                 </div>
                 <!-- Post /////-->
@@ -118,15 +138,14 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".gedf-drop1" aria-controls="gedf-drop1" aria-expanded="false" aria-label="Toggle navigation">
                                         <i class="fa fa-ellipsis-h"></i>
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="#">Save</a>
-                                        <a class="dropdown-item" href="#">Hide</a>
-                                        <a class="dropdown-item" href="#">Report</a>
+                                    <div class="dropdown-menu dropdown-menu-right gedf-drop1" aria-labelledby="gedf-drop1">
+                                        <div class="h6 dropdown-header">Configuracion</div>
+                                        <a class="dropdown-item" href="#">Guardar</a>
+                                        <a class="dropdown-item" href="#">Reportar</a>
                                     </div>
                                 </div>
                             </div>
@@ -144,9 +163,9 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Me gusta</a>
+                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comentar</a>
+                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Compartir</a>
                     </div>
                 </div>
             </div>
