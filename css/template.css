@@ -1,6 +1,7 @@
 label.error{
     color: red;
     font-style: italic;
+    display: none;
 }
 
 input.error, select.error{

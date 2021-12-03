@@ -1,13 +1,10 @@
-$.validator.addMethod("noSpace", function(value, element){
-    return value == ''|| value.trim().length != 0;
-},'No se permiten espacios');
+function spinnerButton(spinner, text, button) {
+    $(button).toggleClass("disabled");
+    $(text).toggleClass("d-none");
+    $(spinner).toggleClass("d-none");
+}
 
-$.validator.addMethod("phoneNumber", function(value, element){
-    var regexPattern = new RegExp(/^[0-9-+]+$/);
-    return regexPattern.test(value);
-},'Numero de telefono invalido');
-
-$("#logout").click(function (e) { 
+$("#logout").click(function(e) {
     e.preventDefault();
     Swal.fire({
         title: 'Cerrar sesion',
@@ -17,9 +14,18 @@ $("#logout").click(function (e) {
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Cerrar sesion'
-      }).then((result) => {
-            if (result.isConfirmed) {
-                location.href = "../";
-            }
-      })
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                type: "POST",
+                url: "../controller/user.php",
+                date: {
+                    function: 'logout'
+                },
+                success: function() {
+                    $(location).attr("href", "../");
+                }
+            });
+        }
+    })
 });

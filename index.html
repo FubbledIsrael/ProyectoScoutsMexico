@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-        <link href="css/template.css" rel="stylesheet">
-        <link rel="icon" href="https://scouts.org.mx/wp-content/uploads/2021/09/cropped-gallardete_ico-32x32.png" sizes="32x32">
-        <title>Scouts Mexico</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <div class="login-form bg-primary mt-4 p-4">
-                        <form class="row g-2" id="formSignIn">
-                            <img class="rounded mx-auto d-block mb-1" src="//scouts.org.mx/wp-content/uploads/2021/09/flor_construir.png" alt="¡Construir un Mundo Mejor!">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
-                                <label for="useremail">Correo electronico</label>
-                            </div>
-                            <label id="email-error" class="error" for="email"></label>
-                            <div class="form-floating">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña">
-                                <label for="password">Contraseña</label>
-                            </div>
-                            <label id="password-error" class="error" for="password"></label>
-                            <div class="form-check ms-2">
-                                <input class="form-check-input" type="checkbox" id="rememberMe">
-                                <label class="form-check-label text-white" for="rememberMe"> Recuerdame</label>
-                            </div>
-                            <div class="d-grid col">
-                                <button type="submit" id="btnSignIn" name="btnSignIn" class="btn btn-success">Ingresar</button>
-                            </div>
-                        </form>
-                        <hr class="mt-4 bg-dark">
-                        <div class="col-12">
-                            <p class="text-center mb-0"><a href="#" class="text-white"> Olvidaste tu contraseña? </a></p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="icon" href="https://scouts.org.mx/wp-content/uploads/2021/09/cropped-gallardete_ico-32x32.png" sizes="32x32">
+    <title>Scouts Mexico</title>
+</head>
+
+<body class="bg-opacity-50 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-10 col-md-5 col-lg-4">
+                <div class="bg-primary mt-4 p-4">
+                    <form class="row g-2" id="formLogin">
+                        <img class="rounded mx-auto d-block mb-1" src="//scouts.org.mx/wp-content/uploads/2021/09/flor_construir.png" alt="¡Construir un Mundo Mejor!">
+
+                        <label id="email-error" class="error" for="email"></label>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                            <label for="useremail">Correo electronico</label>
                         </div>
+
+                        <label id="password-error" class="error" for="password"></label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña">
+                            <label for="password">Contraseña</label>
+                        </div>
+
+                        <button class="w-100 btn btn-lg btn-success" id="btnLogin" name="btnLogin">
+                            <span id="btnText">Ingresar</span>
+                            <div id="btnSpinner" class="spinner-border d-none" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </button>
+                    </form>
+                    <hr class="mt-4 bg-dark">
+                    <div class="col-12">
+                        <p class="text-center mb-0"><a href="#" class="text-white"> Olvidaste tu contraseña? </a></p>
                     </div>
                 </div>
             </div>
-        </div>     
-        <script src="js/bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/jquery.validate.js"></script>
-        <script src="js/functions.js"></script>
-        <script src="js/signIn.js"></script>
-    </body>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
 </html>

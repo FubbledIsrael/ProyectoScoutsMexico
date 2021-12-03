@@ -1655,3 +1655,12 @@ if ( $.ajaxPrefilter ) {
 }
 return $;
 }));
+
+$.validator.addMethod("noSpace", function(value, element){
+    return value == ''|| value.trim().length != 0;
+},'No se permiten espacios');
+
+$.validator.addMethod("phoneNumber", function(value, element){
+    var regexPattern = new RegExp(/^[0-9-+]+$/);
+    return regexPattern.test(value);
+},'Numero de telefono invalido');
