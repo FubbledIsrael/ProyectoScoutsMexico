@@ -1,10 +1,20 @@
+<?php    
+	session_start();
+	$id_user = $_SESSION['id_user'];
+	$first_name = $_SESSION['first_name'];
+	$last_name = $_SESSION['last_name'];
+	$id_role = $_SESSION['id_role'];
+	
+	if(empty($id_user))
+		header("location: ../");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f7d57bfcae.js" crossorigin="anonymous"></script>
     <link rel="icon" href="https://scouts.org.mx/wp-content/uploads/2021/09/cropped-gallardete_ico-32x32.png" sizes="32x32">
     <title>Scouts Mexico</title>
@@ -22,27 +32,21 @@
             </button>
             
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="nav">
+                <ul class="navbar-nav">
                     <li class="nav-item ">
-                        <a id="home" class="nav-link" href="../pages/home.php">
+                        <a id="home" class="nav-link" href="../views/home.php">
                             <i class="fas fa-home" aria-hidden="true"></i> 
                             Inicio
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a id="profile" class="nav-link" href="../pages/profile.php">
-                            <i class="fas fa-user-alt" aria-hidden="true"></i>
-                            Perfil
                         </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="options" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-cog" aria-hidden="true"></i> 
-                            Opciones
+                            <?php echo $first_name. " " . $last_name; ?>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-primary" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Configuracion</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-question"></i> Ayuda</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../views/profile.php"><i class="fas fa-user-alt" aria-hidden="true"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://scouts.org.mx/aviso-de-privacidad/"><i class="fas fa-question"></i> Ayuda</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <a id="logout" class="dropdown-item" href="#">

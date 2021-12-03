@@ -38,7 +38,6 @@ $(document).ready(function() {
                     spinnerButton('#btnSpinner', '#btnText', '#btnLogin');
                 },
                 success: function(response) {
-                    console.log(response);
                     try {
                         var json = JSON.parse(response);
                         if (json.error == 0) {

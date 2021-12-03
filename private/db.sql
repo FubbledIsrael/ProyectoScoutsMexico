@@ -1,5 +1,4 @@
 CREATE DATABASE IF NOT EXISTS scout_mexico;
-CHARACTER SET utf8
 
 CREATE TABLE users (
     id int NOT NULL AUTO_INCREMENT,
@@ -7,16 +6,17 @@ CREATE TABLE users (
     first_name varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
+    age int NOT NULL,
     PRIMARY KEY (id)
 );
 
-INSERT INTO users (last_name, first_name, email, password)
-VALUES ("josue", "varela", "josue.varela@uabc.edu.mx", "password"),
-("rodrigo", "leal", "rodrigo.leal@uabc.edu.mx", "password"),
-("alan", "robledo", "alan.robledo@uabc.edu.mx", "password"),
-("arturo", "viruete", "arturo.viruete@uabc.edu.mx", "password"),
-("user", "administrador", "administrador@uabc.edu.mx", "password"),
-("user", "scout", "scout@uabc.edu.mx", "password");
+INSERT INTO users (last_name, first_name, email, password, age)
+VALUES ("josue", "varela", "josue.varela@uabc.edu.mx", "password",8),
+("rodrigo", "leal", "rodrigo.leal@uabc.edu.mx", "password",9),
+("alan", "robledo", "alan.robledo@uabc.edu.mx", "password",9),
+("arturo", "viruete", "arturo.viruete@uabc.edu.mx", "password",10),
+("user", "administrador", "administrador@uabc.edu.mx", "password",40),
+("user", "scout", "scout@uabc.edu.mx", "password",40);
 
 CREATE TABLE roles (
     id int NOT NULL AUTO_INCREMENT,
@@ -27,9 +27,8 @@ CREATE TABLE roles (
 
 INSERT INTO roles (name, description)
 VALUES ("Administrador", "Administrador de sistema"),
-("Scouts", "Scouts del grupo"),
 ("Control parental", "Control para los novatos"),
-("Novato", "Miembro de los scouts");
+("Scout", "Miembro de los scouts");
 
 CREATE TABLE user_role (
     id int NOT NULL AUTO_INCREMENT,
@@ -43,9 +42,9 @@ CREATE TABLE user_role (
 INSERT INTO `user_role` (`id_user`, `id_role`) VALUES (5, 1),
 (6, 2),
 (1, 3),
-(2, 4),
-(3, 4),
-(4, 4);
+(2, 3),
+(3, 3),
+(4, 3);
 
 CREATE TABLE groups (
     id int NOT NULL AUTO_INCREMENT,
